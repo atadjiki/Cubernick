@@ -190,6 +190,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1074326909}
   - {fileID: 1593483019}
   - {fileID: 1535527443}
   - {fileID: 1963201134}
@@ -197,7 +198,7 @@ Transform:
   - {fileID: 1679190903}
   - {fileID: 836457742}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &563913831
 Prefab:
@@ -236,7 +237,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5d4c9599a161cf84bad85a2ee69e997e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5d4c9599a161cf84bad85a2ee69e997e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -402,11 +403,11 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 450516862}
     m_Modifications:
     - target: {fileID: 400000, guid: bad639071602952458ebb7a4b55c609b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bad639071602952458ebb7a4b55c609b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -418,7 +419,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bad639071602952458ebb7a4b55c609b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bad639071602952458ebb7a4b55c609b, type: 3}
       propertyPath: m_LocalRotation.y
@@ -434,7 +435,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bad639071602952458ebb7a4b55c609b, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: bad639071602952458ebb7a4b55c609b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -480,7 +481,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: e8f485c2215f65e44bd5df641a52efeb, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100084, guid: e8f485c2215f65e44bd5df641a52efeb, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -737,7 +738,7 @@ Transform:
   m_LocalScale: {x: 10, y: 0.1, z: 8}
   m_Children: []
   m_Father: {fileID: 450516862}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &836457743
 Rigidbody:
@@ -807,6 +808,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 836457741}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1074326909 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: bad639071602952458ebb7a4b55c609b, type: 3}
+  m_PrefabInternal: {fileID: 613615728}
 --- !u!1001 &1113429139
 Prefab:
   m_ObjectHideFlags: 0
@@ -886,7 +891,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 425e37186585610489faffc890fa0dc0, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 425e37186585610489faffc890fa0dc0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1316,7 +1321,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: da8c09d48cd844d46b66dfc02c9f506d, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: da8c09d48cd844d46b66dfc02c9f506d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1341,9 +1346,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabSpot: {fileID: 0}
-  grabStyle: 0
+  grabStyle: 1
   matchPosition: 1
-  matchRotation: 0
+  matchRotation: 1
 --- !u!114 &1313484736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1361,37 +1366,6 @@ MonoBehaviour:
   colorOnGrabMulti: {r: 1, g: 0, b: 0, a: 1}
   targetRenderer: {fileID: 0}
   grabbable: {fileID: 0}
---- !u!114 &1313484737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1313484732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f998b0e84ebe41240abe525ad28ce99f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwMultiplier: 1
-  zeroGravityThrow: 0
-  velocityOverTime:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  upDownCurveOverTime:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  leftRightCurveOverTime:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!65 &1313484739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1482,7 +1456,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1535527443 stripped
 Transform:
@@ -1530,12 +1504,12 @@ Prefab:
     - target: {fileID: 114710303647202208, guid: d29bc40b7f3df26479d6a0aac211c355,
         type: 2}
       propertyPath: AlwaysUseAlternateLeftModel
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114710303647202208, guid: d29bc40b7f3df26479d6a0aac211c355,
         type: 2}
       propertyPath: AlwaysUseAlternateRightModel
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114710303647202208, guid: d29bc40b7f3df26479d6a0aac211c355,
         type: 2}
@@ -1634,7 +1608,7 @@ Transform:
   m_LocalScale: {x: 14.630673, y: 11.460759, z: 11.460759}
   m_Children: []
   m_Father: {fileID: 450516862}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!4 &1679190903 stripped
 Transform:
