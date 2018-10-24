@@ -29,6 +29,8 @@ public class PuzzleContainer : MonoBehaviour {
             if(Vector3.Distance(thePuzzle.transform.position, tr_SnapPosition.position) >0.03f)
             {
                 thePuzzle.transform.position = Vector3.Lerp(thePuzzle.transform.position, tr_SnapPosition.position, 2*Time.deltaTime);
+                //Vector3 destRot = new Vector3(i_AnswerDir * 90, thePuzzle.transform.eulerAngles.y, thePuzzle.transform.eulerAngles.z);
+                //thePuzzle.transform.eulerAngles = Vector3.Lerp(thePuzzle.transform.eulerAngles, destRot, 2 * Time.deltaTime);
             }
             else
             {
@@ -37,12 +39,24 @@ public class PuzzleContainer : MonoBehaviour {
             }
         }
 
-        if(b_RotQuest && thePuzzle != null)
+        if(b_RotQuest && thePuzzle != null && !b_RotMatch)
         {
             float dotValue = Vector3.Dot(tr_SnapPosition.up, thePuzzle.transform.up);
+            float angleBetween = Vector3.SignedAngle(tr_SnapPosition.up, thePuzzle.transform.up, Vector3.left);
+            //Debug.Log(dotValue + " " + angleBetween);
+            int dir = -1;
+            if (dotValue > 0 && ((angleBetween > 0 &&angleBetween < f_RotThreshold) || (angleBetween <0 && angleBetween > -f_RotThreshold)))
+                dir = 0;
+            if (angleBetween > 90 - f_RotThreshold && angleBetween < 90 + f_RotThreshold)
+                dir = 1;
+            if (dotValue < 0 &&((angleBetween > -180 && angleBetween < -180 + f_RotThreshold) || (angleBetween < 180 && angleBetween > 180 - f_RotThreshold) ))
+                dir = 2;
+            if (angleBetween < -90 + f_RotThreshold && angleBetween > -90 - f_RotThreshold)
+                dir = 3;
 
-            Debug.Log(dotValue);
 
+            if (dir == i_AnswerDir)
+                b_RotMatch = true;
             if (b_RotMatch)
             {
                 SnapObjectIn();
