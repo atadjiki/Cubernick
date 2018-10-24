@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: 1901e6059a6eb4792b77ac1c02ab24cb
+timeCreated: 1540349186
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: baseRoom
+    100002: cabinetdoor1
+    100004: cabinetdoor2
+    100006: cabinetdoor3
+    100008: cabinetdoor4
+    100010: CLoset
+    100012: ClosetDoors
+    100014: //RootNode
+    100016: pCube10
+    100018: pCube11
+    100020: pCube12
+    100022: pCube14
+    100024: pCube15
+    100026: pCube4
+    100028: pCube7
+    100030: pCube8
+    100032: pCube9
+    100034: polySurface1
+    100036: polySurface2
+    100038: WallCabinets1
+    400000: baseRoom
+    400002: cabinetdoor1
+    400004: cabinetdoor2
+    400006: cabinetdoor3
+    400008: cabinetdoor4
+    400010: CLoset
+    400012: ClosetDoors
+    400014: //RootNode
+    400016: pCube10
+    400018: pCube11
+    400020: pCube12
+    400022: pCube14
+    400024: pCube15
+    400026: pCube4
+    400028: pCube7
+    400030: pCube8
+    400032: pCube9
+    400034: polySurface1
+    400036: polySurface2
+    400038: WallCabinets1
+    2300000: cabinetdoor1
+    2300002: cabinetdoor2
+    2300004: cabinetdoor3
+    2300006: cabinetdoor4
+    2300008: CLoset
+    2300010: ClosetDoors
+    2300012: pCube10
+    2300014: pCube11
+    2300016: pCube12
+    2300018: pCube14
+    2300020: pCube15
+    2300022: pCube4
+    2300024: pCube7
+    2300026: pCube8
+    2300028: pCube9
+    2300030: polySurface1
+    2300032: polySurface2
+    2300034: WallCabinets1
+    3300000: cabinetdoor1
+    3300002: cabinetdoor2
+    3300004: cabinetdoor3
+    3300006: cabinetdoor4
+    3300008: CLoset
+    3300010: ClosetDoors
+    3300012: pCube10
+    3300014: pCube11
+    3300016: pCube12
+    3300018: pCube14
+    3300020: pCube15
+    3300022: pCube4
+    3300024: pCube7
+    3300026: pCube8
+    3300028: pCube9
+    3300030: polySurface1
+    3300032: polySurface2
+    3300034: WallCabinets1
+    4300000: WallCabinets1
+    4300002: polySurface1
+    4300004: CLoset
+    4300006: cabinetdoor1
+    4300008: cabinetdoor2
+    4300010: cabinetdoor4
+    4300012: cabinetdoor3
+    4300014: ClosetDoors
+    4300016: pCube4
+    4300018: pCube7
+    4300020: pCube8
+    4300022: pCube9
+    4300024: pCube10
+    4300026: pCube11
+    4300028: polySurface2
+    4300030: pCube12
+    4300032: pCube14
+    4300034: pCube15
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BigCloset1
+    second: {fileID: 2100000, guid: 6e3940a4596154feaa86730f40a63e4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CLosetHandles
+    second: {fileID: 2100000, guid: 1f7d641813207451f8f7937f44596f43, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DetectiveDoor
+    second: {fileID: 2100000, guid: 0c3709b6796c24dc391fa7d771b04358, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DetectiveDoorGlass
+    second: {fileID: 2100000, guid: 20c294367b04a4532a784b774d1041d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FrontDoorHandles
+    second: {fileID: 2100000, guid: 4d71aaf6d72be4fe580a230afe7ba897, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LargerRoomTest
+    second: {fileID: 2100000, guid: 0b927acabf16d44379e48000ace966e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OuterHallway
+    second: {fileID: 2100000, guid: 46723184b529b4bacaf76238ac476c49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallCabinetDoors
+    second: {fileID: 2100000, guid: 7b5efcdf6e2cb465a824a78a443cdd8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallCabinetHandles
+    second: {fileID: 2100000, guid: e3bea2bde9b444654967152dfd102eab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallCabinets
+    second: {fileID: 2100000, guid: e837352e7ba644c88a024e93f49806fa, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
