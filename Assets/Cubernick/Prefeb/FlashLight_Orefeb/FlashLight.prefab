@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab3d925012e4b214cb72f4cdc3b27749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  f_maxDetectDist: 3.5
+  f_maxDetectDist: 6
   f_maxRadius: 0.89
   mask:
     serializedVersion: 2

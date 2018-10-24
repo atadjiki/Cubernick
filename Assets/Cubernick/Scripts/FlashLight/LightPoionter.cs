@@ -10,6 +10,7 @@ public class LightPoionter : MonoBehaviour {
     [SerializeField] LayerMask mask;
 
     [SerializeField] private bool b_lightOn;
+    private bool b_triggerDown;
 	// Use this for initialization
 	void Start () {
         sc_detector = GetComponent<SphereCollider>();
@@ -21,6 +22,15 @@ public class LightPoionter : MonoBehaviour {
         DebugDraw();
         if(b_lightOn)
             RayCastToShowObject();
+
+        if (!b_triggerDown && Input.GetAxis("CONTROLLER_LEFT_TRIGGER") > 0)
+        {
+            b_triggerDown = true;
+            Debug.Log("Trigger Down");
+            TurnOnOffLight(!b_lightOn);
+        }
+        if (Input.GetAxis("CONTROLLER_LEFT_TRIGGER") == 0)
+            b_triggerDown = false;
     }
 
     public void TurnOnOffLight(bool _bON)
@@ -48,8 +58,8 @@ public class LightPoionter : MonoBehaviour {
         if(Physics.Raycast(ray,out hit, f_maxDetectDist, mask))
         {
             f_currDetectDist = Vector3.Distance(hit.point, transform.position);
-            sc_detector.radius = f_maxRadius * f_currDetectDist / f_maxDetectDist;
-            sc_detector.center = new Vector3(sc_detector.center.x, sc_detector.center.y, f_currDetectDist);
+            sc_detector.radius = 10f*f_maxRadius * f_currDetectDist / f_maxDetectDist;
+            sc_detector.center = new Vector3(sc_detector.center.x, sc_detector.center.y, 10*f_currDetectDist);
             return hit.transform.gameObject;
         }
         else
@@ -65,4 +75,6 @@ public class LightPoionter : MonoBehaviour {
     {
         Debug.DrawLine(transform.position, transform.position + transform.forward * f_currDetectDist, Color.red);
     }
+
+  
 }
