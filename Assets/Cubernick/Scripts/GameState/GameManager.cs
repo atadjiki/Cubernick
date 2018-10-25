@@ -7,22 +7,36 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     public GameObject resetButton;
-    public GameObject startPosition;
-    public GameObject Managers;
+    public GameObject lightSource;
+    public GameObject music;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    System.Random randPitch;
+
+    // Use this for initialization
+    void Start()
+    {
+         randPitch = new System.Random();
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		
         if(resetButton.GetComponent<CompoundButtonToggle>().State == true)
         {
-            Managers.GetComponent<Transform>().
-                SetPositionAndRotation(startPosition.GetComponent<Transform>().position, startPosition.GetComponent<Transform>().rotation);
+            lightSource.SetActive(false);
+            Debug.Log("Button Pressed: " + resetButton.GetComponent<CompoundButtonToggle>().State);
+        }
+       else if (resetButton.GetComponent<CompoundButtonToggle>().State == false)
+        {
+            lightSource.SetActive(true);
+            Debug.Log("Button Pressed: " + resetButton.GetComponent<CompoundButtonToggle>().State);
         }
 
-	}
+    }
+    
+    void scramblePitch()
+    {
+
+        music.GetComponent<AudioSource>().pitch = (float) (randPitch.NextDouble() * (1.2 - 0.5) + 0.5);
+    }
 }
