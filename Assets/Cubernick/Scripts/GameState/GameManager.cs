@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour {
     private bool buttonPressed = false;
     private bool currentState = false;
 
+    private int pressCount = 0;
+
     System.Random randPitch;
 
     // Use this for initialization
@@ -30,6 +32,7 @@ public class GameManager : MonoBehaviour {
         if(currentState != state)
         {
             currentState = state;
+            pressCount++;
 
             if (state == true)
             {
@@ -43,7 +46,11 @@ public class GameManager : MonoBehaviour {
                 Debug.Log("Button Pressed: " + resetButton.GetComponent<CompoundButtonToggle>().State);
             }
 
-            switchSong();
+            if(pressCount % 5 == 0)
+            {
+                switchSong();
+            }
+            
         }
     }
     
