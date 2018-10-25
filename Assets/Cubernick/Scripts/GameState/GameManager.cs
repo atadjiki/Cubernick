@@ -6,15 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+    public GameObject lightSwitchButton;
     public GameObject resetButton;
     public GameObject lightSource;
     public GameObject musicOn;
     public GameObject musicOff;
 
-    private bool buttonPressed = false;
-    private bool currentState = false;
+    private bool lightSwitchPressed = false;
+    private bool currentLightSwitchState = false;
+    private int lightSwitchPressCount = 0;
 
-    private int pressCount = 0;
+    private bool resetPressed = false;
+    private bool currentResetState = false;
 
     System.Random randPitch;
 
@@ -27,36 +30,53 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        bool state = resetButton.GetComponent<CompoundButtonToggle>().State;
+        bool lightSwitchState = lightSwitchButton.GetComponent<CompoundButtonToggle>().State;
         
-        if(currentState != state)
+        if(currentLightSwitchState != lightSwitchState)
         {
-            currentState = state;
-            pressCount++;
+            currentLightSwitchState = lightSwitchState;
+            lightSwitchPressCount++;
 
-            if (state == true)
+            if (lightSwitchState == true)
             {
                 lightSource.SetActive(false);
-                Debug.Log("Button Pressed: " + resetButton.GetComponent<CompoundButtonToggle>().State);
+                Debug.Log("Light Switch Pressed: " + lightSwitchState);
 
             }
-            else if (state == false)
+            else if (lightSwitchState == false)
             {
                 lightSource.SetActive(true);
-                Debug.Log("Button Pressed: " + resetButton.GetComponent<CompoundButtonToggle>().State);
+                Debug.Log("Light Switch Pressed: " + lightSwitchState);
             }
 
-            if(pressCount % 5 == 0)
+            if(lightSwitchPressCount % 5 == 0)
             {
                 switchSong();
             }
             
         }
+
+        bool resetState = resetButton.GetComponent<CompoundButtonToggle>().State;
+
+        if (currentResetState != resetState)
+        {
+            currentResetState = resetState;
+
+            if (resetState == true)
+            {
+                Debug.Log("Reset Button Pressed: " + resetState);
+                Application.Quit();
+            }
+            else if (resetState == false)
+            {
+                Debug.Log("Reset Button Pressed: " + resetState);
+            }
+        }
     }
     
     void switchSong()
     {
-        if (currentState)
+        if (currentLightSwitchState)
         {
             musicOn.GetComponent<AudioSource>().mute = false;
             musicOff.GetComponent<AudioSource>().mute = true;
