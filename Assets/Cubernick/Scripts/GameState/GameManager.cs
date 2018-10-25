@@ -8,7 +8,11 @@ public class GameManager : MonoBehaviour {
 
     public GameObject resetButton;
     public GameObject lightSource;
-    public GameObject music;
+    public GameObject musicOn;
+    public GameObject musicOff;
+
+    private bool buttonPressed = false;
+    private bool currentState = false;
 
     System.Random randPitch;
 
@@ -20,23 +24,40 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-        if(resetButton.GetComponent<CompoundButtonToggle>().State == true)
-        {
-            lightSource.SetActive(false);
-            Debug.Log("Button Pressed: " + resetButton.GetComponent<CompoundButtonToggle>().State);
-        }
-       else if (resetButton.GetComponent<CompoundButtonToggle>().State == false)
-        {
-            lightSource.SetActive(true);
-            Debug.Log("Button Pressed: " + resetButton.GetComponent<CompoundButtonToggle>().State);
-        }
 
+        bool state = resetButton.GetComponent<CompoundButtonToggle>().State;
+        
+        if(currentState != state)
+        {
+            currentState = state;
+
+            if (state == true)
+            {
+                lightSource.SetActive(false);
+                Debug.Log("Button Pressed: " + resetButton.GetComponent<CompoundButtonToggle>().State);
+
+            }
+            else if (state == false)
+            {
+                lightSource.SetActive(true);
+                Debug.Log("Button Pressed: " + resetButton.GetComponent<CompoundButtonToggle>().State);
+            }
+
+            switchSong();
+        }
     }
     
-    void scramblePitch()
+    void switchSong()
     {
-
-        music.GetComponent<AudioSource>().pitch = (float) (randPitch.NextDouble() * (1.2 - 0.5) + 0.5);
+        if (currentState)
+        {
+            musicOn.GetComponent<AudioSource>().mute = false;
+            musicOff.GetComponent<AudioSource>().mute = true;
+        }
+        else 
+        {
+            musicOn.GetComponent<AudioSource>().mute = true;
+            musicOff.GetComponent<AudioSource>().mute = false;
+        }
     }
 }
