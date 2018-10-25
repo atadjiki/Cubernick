@@ -633,7 +633,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 611967696}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.18280001, y: 0.0857, z: 0.3197}
+  m_LocalPosition: {x: -0.09, y: 0.043, z: 0.3197}
   m_LocalScale: {x: 0.028026, y: 0.028026, z: 0.028026}
   m_Children:
   - {fileID: 799504437}
@@ -651,8 +651,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 18.126198, y: 3.5400922, z: 0.6972238}
-  m_Center: {x: 0.8105237, y: 0.14007805, z: 0.15138806}
+  m_Size: {x: 9.082489, y: 1.9849194, z: 0.6972238}
+  m_Center: {x: -2.994731, y: 0.9176653, z: 0.15138806}
 --- !u!114 &611967699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1095,7 +1095,7 @@ Transform:
   m_GameObject: {fileID: 799504436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.06, y: 1.81, z: -0.31999993}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 611967697}
   m_RootOrder: 0
@@ -1115,12 +1115,12 @@ TextMesh:
   m_Alignment: 0
   m_TabSize: 4
   m_FontSize: 0
-  m_FontStyle: 0
+  m_FontStyle: 2
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4281049599
+    rgba: 4278190080
 --- !u!23 &799504439
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2145,7 +2145,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1444601404618700, guid: c049ea9647771d94b9bf21eb1cee7c34, type: 2}
       propertyPath: m_Name
-      value: ResetButton
+      value: LightSwitch
       objectReference: {fileID: 0}
     - target: {fileID: 4603565383086324, guid: c049ea9647771d94b9bf21eb1cee7c34, type: 2}
       propertyPath: m_LocalScale.x
@@ -3051,8 +3051,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12097b418e627437d9c0ab01eba7bf54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightSwitchButton: {fileID: 876626815}
-  resetButton: {fileID: 653871547}
+  lightSwitchButton: {fileID: 1331246756}
+  resetButton: {fileID: 1591344977}
   lightSource: {fileID: 897827908}
   musicOn: {fileID: 666741128}
   musicOff: {fileID: 1310427708}
@@ -3164,7 +3164,7 @@ Prefab:
     - target: {fileID: 2300030, guid: 1901e6059a6eb4792b77ac1c02ab24cb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a18c43c5b5e334f55b9178b5c6b86c13, type: 2}
+      objectReference: {fileID: 2100000, guid: 677c943f2126ece4b8dd656206ed6146, type: 2}
     - target: {fileID: 2300010, guid: 1901e6059a6eb4792b77ac1c02ab24cb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3201,6 +3201,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3300030, guid: 1901e6059a6eb4792b77ac1c02ab24cb, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 2ac84841b16014a49a6e71c952d5c041, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1901e6059a6eb4792b77ac1c02ab24cb, type: 3}
   m_IsPrefabParent: 0
