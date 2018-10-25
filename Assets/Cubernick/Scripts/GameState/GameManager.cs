@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     public GameObject resetButton;
+    public GameObject startPosition;
+    public GameObject Managers;
 
 	// Use this for initialization
 	void Start () {
@@ -18,8 +20,8 @@ public class GameManager : MonoBehaviour {
 		
         if(resetButton.GetComponent<CompoundButtonToggle>().State == true)
         {
-            SceneManager.UnloadScene(SceneManager.GetActiveScene().name);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Managers.GetComponent<Transform>().
+                SetPositionAndRotation(startPosition.GetComponent<Transform>().position, startPosition.GetComponent<Transform>().rotation);
         }
 
 	}
