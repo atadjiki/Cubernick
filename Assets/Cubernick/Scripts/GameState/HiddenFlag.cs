@@ -20,21 +20,23 @@ public class HiddenFlag : MonoBehaviour {
 
     public void setHidden()
     {
-        hidden = true;
-        foreach (Renderer child in this.gameObject.GetComponentsInChildren<Renderer>())
-        {
-            child.material.color = Color.green;
-        }
+        //hidden = true;
+        //foreach (Renderer child in this.gameObject.GetComponentsInChildren<Renderer>())
+        //{
+        //    child.material.color = Color.green;
+        //}
 
-        foreach (GrabbableChild child in this.gameObject.GetComponentsInChildren<GrabbableChild>())
-        {
-            child.enabled = false;
-        }
+        //foreach (GrabbableChild child in this.gameObject.GetComponentsInChildren<GrabbableChild>())
+        //{
+        //    child.enabled = false;
+        //}
 
-        foreach (ThrowableObject child in this.gameObject.GetComponentsInChildren<ThrowableObject>())
-        {
-            child.enabled = false;
-        }
+        //foreach (ThrowableObject child in this.gameObject.GetComponentsInChildren<ThrowableObject>())
+        //{
+        //    child.enabled = false;
+        //}
+        Debug.Log("Setting Hidden: " + this.name);
+        this.gameObject.SetActive(false);
 
     }
 
