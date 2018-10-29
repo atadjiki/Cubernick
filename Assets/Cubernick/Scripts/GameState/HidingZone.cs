@@ -6,6 +6,7 @@ public class HidingZone : MonoBehaviour {
 
     public Material before;
     public Material after;
+    public GameObject requires;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,11 @@ public class HidingZone : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Entered hiding zone collision: " + this.name);
+
+        if(requires != null && collision.gameObject != requires)
+        {
+            return;
+        }
 
         if(collision.gameObject.GetComponent<HiddenFlag>() != null)
         {
