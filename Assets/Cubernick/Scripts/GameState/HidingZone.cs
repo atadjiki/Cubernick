@@ -18,8 +18,10 @@ public class HidingZone : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject == this.gameObject)
+        if(collision.gameObject.GetComponent<HiddenFlag>() != null)
         {
+            Debug.Log("Body part hidden" + collision.gameObject.name);
+            collision.gameObject.GetComponent<HiddenFlag>().setHidden();
             GameObject.Find("GameManager").GetComponent<GameManager>().decrementCount();
             this.gameObject.SetActive(false);
         }
