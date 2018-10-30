@@ -8,6 +8,7 @@ public class ButtonManager : MonoBehaviour {
 
     public GameObject lightSwitchButton;
     public GameObject resetButton;
+    public GameObject axeButton;
     public GameObject lightSource;
     public GameObject musicOn;
     public GameObject musicOff;
@@ -18,6 +19,9 @@ public class ButtonManager : MonoBehaviour {
 
     private bool resetPressed = false;
     private bool currentResetState = false;
+
+    private bool axePressed = false;
+    private bool currentAxeState = false;
 
     System.Random randPitch;
 
@@ -70,6 +74,28 @@ public class ButtonManager : MonoBehaviour {
             else if (resetState == false)
             {
                 Debug.Log("Reset Button Pressed: " + resetState);
+            }
+        }
+
+        bool axeState = axeButton.GetComponent<CompoundButtonToggle>().State;
+
+        if (currentAxeState != axeState)
+        {
+            currentAxeState = axeState;
+
+            if (axeState == true)
+            {
+                Debug.Log("Axe Button Pressed: " + axeState);
+                GameObject axe = GameObject.Find("Trigger");
+                GameObject position = GameObject.Find("AxePosition");
+
+                axe.transform.SetPositionAndRotation(position.transform.position, position.transform.rotation);
+                axe.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                axe.gameObject.GetComponent<Rigidbody>().useGravity = false;
+            }
+            else if (axeState == false)
+            {
+                Debug.Log("Axe Button Pressed: " + axeState);
             }
         }
     }
