@@ -10,8 +10,9 @@ public class HidingZone : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-        setMaterial(before);
+        
+        if(before != null)
+            setMaterial(before);
 		
 	}
 	
@@ -36,7 +37,7 @@ public class HidingZone : MonoBehaviour {
             Debug.Log("Body part hidden" + collision.gameObject.name);
             collision.gameObject.GetComponent<HiddenFlag>().setHidden(); //hide the body part
             GameObject.Find("GameManager").GetComponent<GameManager>().decrementCount(); //decrement body count
-            setMaterial(after);
+            if(after!=null) setMaterial(after);
         }
     }
 
