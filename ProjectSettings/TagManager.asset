@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FlashLight
   - CutTrigger
+  - DrawerDest
   layers:
   - Default
   - TransparentFX
