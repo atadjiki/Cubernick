@@ -21,6 +21,18 @@ ModelImporter:
     100030: pasted__RightShank
     100032: pasted__RightThigh
     100034: pasted__RightUpperarm
+    100036: polySurface1
+    100038: polySurface10
+    100040: polySurface11
+    100042: polySurface12
+    100044: polySurface2
+    100046: polySurface3
+    100048: polySurface4
+    100050: polySurface5
+    100052: polySurface6
+    100054: polySurface7
+    100056: polySurface8
+    100058: polySurface9
     400000: //RootNode
     400002: pasted__Chest
     400004: pasted__Coat
@@ -39,9 +51,22 @@ ModelImporter:
     400030: pasted__RightShank
     400032: pasted__RightThigh
     400034: pasted__RightUpperarm
+    400036: polySurface1
+    400038: polySurface10
+    400040: polySurface11
+    400042: polySurface12
+    400044: polySurface2
+    400046: polySurface3
+    400048: polySurface4
+    400050: polySurface5
+    400052: polySurface6
+    400054: polySurface7
+    400056: polySurface8
+    400058: polySurface9
     2100000: lambert1
     2100002: pasted__lambert3
     2100004: pasted__lambert2
+    2100006: BodyMaterial
     2300000: pasted__Chest
     2300002: pasted__Coat
     2300004: pasted__Crotch
@@ -59,6 +84,18 @@ ModelImporter:
     2300028: pasted__RightShank
     2300030: pasted__RightThigh
     2300032: pasted__RightUpperarm
+    2300034: polySurface1
+    2300036: polySurface10
+    2300038: polySurface11
+    2300040: polySurface12
+    2300042: polySurface2
+    2300044: polySurface3
+    2300046: polySurface4
+    2300048: polySurface5
+    2300050: polySurface6
+    2300052: polySurface7
+    2300054: polySurface8
+    2300056: polySurface9
     3300000: pasted__Chest
     3300002: pasted__Coat
     3300004: pasted__Crotch
@@ -76,6 +113,18 @@ ModelImporter:
     3300028: pasted__RightShank
     3300030: pasted__RightThigh
     3300032: pasted__RightUpperarm
+    3300034: polySurface1
+    3300036: polySurface10
+    3300038: polySurface11
+    3300040: polySurface12
+    3300042: polySurface2
+    3300044: polySurface3
+    3300046: polySurface4
+    3300048: polySurface5
+    3300050: polySurface6
+    3300052: polySurface7
+    3300054: polySurface8
+    3300056: polySurface9
     4300000: pasted__Head
     4300002: pasted__Neck
     4300004: pasted__Chest
@@ -93,6 +142,18 @@ ModelImporter:
     4300028: pasted__LeftUpperarm
     4300030: pasted__LeftFoot
     4300032: pasted__Coat
+    4300034: polySurface4
+    4300036: polySurface3
+    4300038: polySurface2
+    4300040: polySurface1
+    4300042: polySurface10
+    4300044: polySurface9
+    4300046: polySurface8
+    4300048: polySurface7
+    4300050: polySurface6
+    4300052: polySurface5
+    4300054: polySurface12
+    4300056: polySurface11
     6400000: pasted__Chest
     6400002: pasted__Coat
     6400004: pasted__Crotch
@@ -110,6 +171,18 @@ ModelImporter:
     6400028: pasted__RightShank
     6400030: pasted__RightThigh
     6400032: pasted__RightUpperarm
+    6400034: polySurface1
+    6400036: polySurface10
+    6400038: polySurface11
+    6400040: polySurface12
+    6400042: polySurface2
+    6400044: polySurface3
+    6400046: polySurface4
+    6400048: polySurface5
+    6400050: polySurface6
+    6400052: polySurface7
+    6400054: polySurface8
+    6400056: polySurface9
     9500000: //RootNode
   externalObjects: {}
   materials:

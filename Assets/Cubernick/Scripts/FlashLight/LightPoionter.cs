@@ -11,6 +11,7 @@ public class LightPoionter : MonoBehaviour {
 
     [SerializeField] private bool b_lightOn;
     private bool b_triggerDown;
+    [SerializeField] GameObject meshOfLight;
 	// Use this for initialization
 	void Start () {
         sc_detector = GetComponent<SphereCollider>();
@@ -41,12 +42,14 @@ public class LightPoionter : MonoBehaviour {
             // turn on light
             transform.GetChild(0).gameObject.SetActive(true);
             sc_detector.enabled = true;
+            meshOfLight.SetActive(true);
         }
         else
         {
             // turn off light
             transform.GetChild(0).gameObject.SetActive(false);
             sc_detector.enabled = false;
+            meshOfLight.SetActive(false);
         }
     }
 
