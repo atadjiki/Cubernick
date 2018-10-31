@@ -20,6 +20,7 @@ public class Drawer : MonoBehaviour {
     {
         if (other.CompareTag("DrawerDest"))
         {
+            other.gameObject.SetActive(false);
             objInDrawer.SetActive(true);
             objInDrawer.transform.parent = null;
         }

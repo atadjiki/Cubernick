@@ -419,7 +419,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967291
   b_lightOn: 0
-  meshOfLight: {fileID: 0}
+  meshOfLight: {fileID: 1876296735115818}
 --- !u!114 &114656963113495538
 MonoBehaviour:
   m_ObjectHideFlags: 1
