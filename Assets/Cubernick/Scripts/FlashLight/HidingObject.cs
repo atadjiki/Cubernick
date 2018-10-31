@@ -5,11 +5,11 @@ using UnityEngine;
 public class HidingObject : MonoBehaviour {
 
     public bool bHiding;
-    private Transform tr_Meshes;
+    private MeshRenderer[] tr_Meshes;
 	// Use this for initialization
 	void Start () {
-        tr_Meshes = transform.GetChild(0);
-        tr_Meshes.gameObject.SetActive(false);
+        tr_Meshes = transform.GetComponentsInChildren<MeshRenderer>();
+        OnAndOff(false);
     }
 	
 	// Update is called once per frame
@@ -21,9 +21,17 @@ public class HidingObject : MonoBehaviour {
     {
         bHiding = !_bOn;
         if (bHiding)
-            tr_Meshes.gameObject.SetActive(false);
+        {
+            foreach (var item in tr_Meshes)
+            {
+                item.transform.gameObject.SetActive(false);
+            }
+        }
         else
-            tr_Meshes.gameObject.SetActive(true);
+            foreach (var item in tr_Meshes)
+            {
+                item.transform.gameObject.SetActive(true);
+            }
 
     }
 
