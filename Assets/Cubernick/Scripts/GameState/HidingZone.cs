@@ -6,7 +6,7 @@ public class HidingZone : MonoBehaviour {
 
     public Material before;
     public Material after;
-    public GameObject requires;
+    public List<GameObject> requires;
 
 	// Use this for initialization
 	void Start () {
@@ -27,7 +27,7 @@ public class HidingZone : MonoBehaviour {
     {
         Debug.Log("Entered hiding zone collision: " + this.name);
 
-        if(requires != null && collision.gameObject != requires)
+        if(requires.Count > 0 && !requires.Contains(collision.gameObject))
         {
             return;
         }
