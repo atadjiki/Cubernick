@@ -6,7 +6,7 @@ public class HidingZone : MonoBehaviour {
 
     public Material before;
     public Material after;
-    public List<GameObject> requires;
+    public GameObject requires;
 
 	// Use this for initialization
 	void Start () {
@@ -27,8 +27,9 @@ public class HidingZone : MonoBehaviour {
     {
         Debug.Log("Entered hiding zone collision: " + this.name);
 
-        if(requires.Count > 0 && !requires.Contains(collision.gameObject))
+        if (requires != null && collision.gameObject != requires)
         {
+            Debug.Log("Not the correct body part");
             return;
         }
 
@@ -38,6 +39,11 @@ public class HidingZone : MonoBehaviour {
             collision.gameObject.GetComponent<HiddenFlag>().setHidden(); //hide the body part
             GameObject.Find("GameManager").GetComponent<GameManager>().decrementCount(); //decrement body count
             if(after!=null) setMaterial(after);
+
+            if(this.gameObject.GetComponent<HidingObject>() != null)
+            {
+                this.gameObject.GetComponent<HidingObject>().enabled = false;
+            }
         }
     }
 
