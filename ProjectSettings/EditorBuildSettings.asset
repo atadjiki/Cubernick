@@ -6,5 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Cubernick/Scenes/Environment.unity
-    guid: e4bdbfde3e9f7d941905edfd8bfe9799
+    path: Assets/Cubernick/Scenes/Final Environment.unity
+    guid: 41b0e8f325983b74eb95136126edf7c4
